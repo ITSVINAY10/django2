@@ -9,33 +9,34 @@
     <link rel="stylesheet" href="{% static 'css/job1.css' %}">
 </head>
 <body>
-    <h1>Hyderabad Jobs Information </h1>
+    <div class="hydjob">
+    <h1 style="margin-left: 33%;">Hyderabad Jobs Information</h1><hr>
     {% if jobs_list %}
-    <table border="3">
-        <thead>
-            <th>Date</th>
-            <th>Company</th>
-            <th>Title</th>
-            <th>Eligibility</th>
-            <th>Address</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-        </thead>
-        {% for job in jobs_list %}
-        <tr>
-            <td> {{job.date}} </td>
-            <td> {{job.company}} </td>
-            <td> {{job.title}} </td>
-            <td> {{job.eligibility}} </td>
-            <td> {{job.address}} </td>
-            <td> {{job.email}} </td>
-            <td> {{job.phonenumber}} </td>
-        </tr>
-        {% endfor %}
+    <table border="3" style="background: red;color: black; margin-left: 3%;" >
+      <thead>
+        <th>Date</th>
+        <th>Company</th>
+        <th>Title</th>
+        <th>Eligibility</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+      </thead>
+      {% for job in jobs_list %}
+      <tr>
+        <td>{{job.date}}</td>
+        <td>{{job.company}}</td>
+        <td>{{job.title}}</td>
+        <td>{{job.eligibility}}</td>
+        <td>{{job.address}}</td>
+        <td>{{job.email}}</td>
+        <td>{{job.phonenumber}}</td>
+      </tr>
+      {% endfor %}
     </table>
     {% else %}
-    <hr><br>
-     <p>No Jobs in Hyderabad.........</p>
+    <p id='specialp'>No Jobs in Hyderabad...........</p>
     {% endif %}
-</body>
+   </div>
+  </body>
 </html>
